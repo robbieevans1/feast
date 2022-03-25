@@ -8,6 +8,11 @@ body::before {
   height: 60px;
 }
 
+#fitbit-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 #portfolio {
   text-decoration: none;
   color: #248754;
