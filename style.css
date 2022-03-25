@@ -8,6 +8,11 @@ body::before {
   height: 60px;
 }
 
+#portfolio {
+  text-decoration: none;
+  color: #248754;
+}
+
 @media(min-width: 768px) {
   .news-input {
     width: 50%;
