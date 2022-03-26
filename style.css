@@ -18,6 +18,15 @@ body::before {
   color: #248754;
 }
 
+footer {
+  
+}
+
+.arrow {
+  color: #248754;
+
+}
+
 @media(min-width: 768px) {
   .news-input {
     width: 50%;
