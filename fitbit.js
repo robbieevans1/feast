@@ -18,15 +18,15 @@ fetch("https://api.fitbit.com/1/user/-/activities/date/2022-03-31.json", {
 		document.querySelector("#calories-burned").innerHTML = caloriesBurned;
 
 
-    const caloriesIn = `<p>Calories Eaten: ${data.summary.caloriesIn}</p>`
-    document.querySelector('#calories-in').innerHTML = caloriesIn
+		const bmr = `<p>BMR: ${data.summary.caloriesBMR}</p>`;
+		document.querySelector("#bmr").innerHTML = bmr;
 
-    const floorCount = `<p>Floor Count: ${data.summary.floors}</p>`
-    document.querySelector('#floor-count').innerHTML = floorCount
+		const floorCount = `<p>Floor Count: ${data.summary.floors}</p>`;
+		document.querySelector("#floor-count").innerHTML = floorCount;
 
-    const stepCount = `<p>Step Count: ${data.summary.steps}</p>`
-    document.querySelector('#step-count').innerHTML = stepCount
+		const stepCount = `<p>Step Count: ${data.summary.steps}</p>`;
+		document.querySelector("#step-count").innerHTML = stepCount;
 
-    const restingHeartRate = `<p>Resting Heart Reate: ${data.summary.restingHeartRate}</p>`
-    document.querySelector('#heart-rate').innerHTML = restingHeartRate
+		const restingHeartRate = `<p>Resting Heart Rate: ${data.summary.restingHeartRate}</p>`;
+		document.querySelector("#heart-rate").innerHTML = restingHeartRate;
 	});
