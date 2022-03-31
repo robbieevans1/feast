@@ -27,6 +27,7 @@ function retrieve(e) {
 			data.articles.forEach((article) => {
 				let li = document.createElement("li");
 				let a = document.createElement("a");
+				a.classList.add('news-text')
         li.classList.add('news-url')
 				a.setAttribute("href", article.url);
 				a.setAttribute("target", "_blank");

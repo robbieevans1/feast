@@ -8,10 +8,14 @@ body::before {
   height: 60px;
 }
 
+.news-text {
+  text-decoration: none;
+  color: black;
+}
+
 .news-url {
   list-style-type: none;
-  color: black;
-  
+
 }
 
 #fitbit-list {
