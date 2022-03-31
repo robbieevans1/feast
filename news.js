@@ -6,7 +6,7 @@ searchForm.addEventListener("submit", retrieve);
 
 function retrieve(e) {
 	if (input.value == "") {
-		alert("Please search for a cryptocurrency");
+		alert("Please search for a topic");
 		return;
 	}
 
