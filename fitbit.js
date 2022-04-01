@@ -45,3 +45,22 @@ fetch(`https://api.fitbit.com/1/user/-/activities/date/${today}.json`, {
 		const restingHeartRate = `<p>Resting Heart Rate: ${data.summary.restingHeartRate}</p>`;
 		document.querySelector("#heart-rate").innerHTML = restingHeartRate;
 	});
+
+  fetch(`https://api.fitbit.com/1/user/-/foods/log/caloriesIn/date/${today}/1d.json`, {
+	method: "GET",
+	headers: { Authorization: "Bearer " + access_token },
+})
+	.then((response) => {
+		console.log(response);
+		if (!response.ok) {
+			throw Error("Error");
+		}
+		return response.json();
+	})
+	.then((data) => {
+		console.log(data);
+		
+    // add calories out data to html
+    const caloriesEaten = `<p>Calories Eaten: ${data["foods-log-caloriesIn"][0].value}</p>`;
+		document.querySelector("#calories-eaten").innerHTML = caloriesEaten;
+	});
