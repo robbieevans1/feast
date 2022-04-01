@@ -1,7 +1,17 @@
+// retreive current date
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+let today = year + "-" + month + "-" + day;
+
+// my fitbit a
 const access_token =
 	"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzg5Q0QiLCJzdWIiOiI0M1BHRFYiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd3dlaSB3c29jIHdzZXQgd2FjdCB3bG9jIiwiZXhwIjoxNjUwNTUwNDE2LCJpYXQiOjE2NDc5NTg0MTZ9.rxaM9ibMMaTpOGQ-k7aYaiIs7CB9J8ydNHuGcIsAA20";
 
-fetch("https://api.fitbit.com/1/user/-/activities/date/2022-03-31.json", {
+fetch(`https://api.fitbit.com/1/user/-/activities/date/${today}.json`, {
 	method: "GET",
 	headers: { Authorization: "Bearer " + access_token },
 })
