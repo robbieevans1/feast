@@ -64,3 +64,10 @@ fetch(`https://api.fitbit.com/1/user/-/activities/date/${today}.json`, {
     const caloriesEaten = `<p>Calories Eaten: ${data["foods-log-caloriesIn"][0].value}</p>`;
 		document.querySelector("#calories-eaten").innerHTML = caloriesEaten;
 	});
+
+  calorieDeficit = "Desired Deficit: 500"
+  document.querySelector("#calorie-deficit").innerHTML = calorieDeficit;
+
+ 
+
+
