@@ -34,14 +34,14 @@ Promise.all([
 	console.log({ data, foodData });
 
 	// add calories out data to html
-	let caloriesBurned = `<p>Calories Burned: <span class="text-danger">${data.summary.caloriesOut} </span></p>`;
+	let caloriesBurned = `<p>Calories Burned: ${data.summary.caloriesOut}</p>`;
 	document.querySelector("#calories-burned").innerHTML = caloriesBurned;
 
 	// add calories out foodData to html
-	let caloriesEaten = `<p>Calories Eaten: <span class="text-success">${foodData["foods-log-caloriesIn"][0].value}</span> </p>`;
+	let caloriesEaten = `<p>Calories Eaten: ${foodData["foods-log-caloriesIn"][0].value}</p>`;
 	document.querySelector("#calories-eaten").innerHTML = caloriesEaten;
 
-	let calorieDeficit = '<p>Desired Deficit: <span class="text-warning">500 </span></p>';
+	let calorieDeficit = "<p>Desired Deficit: 500</p>";
 	document.querySelector("#calorie-deficit").innerHTML = calorieDeficit;
 
 	// adds bmr data to html
@@ -68,7 +68,8 @@ Promise.all([
 	// redeclaring variable from food url
 	caloriesEaten = foodData["foods-log-caloriesIn"][0].value;
 
-	const caloriesAvailable = `<p> Calories Available<span class="text-success"> Right Now</span>: ${
-		caloriesBurned - caloriesEaten - calorieDeficit} </p>`;
+	const caloriesAvailable = `<p> Calories Available<span class="text-warning"> Right Now</span>: ${
+		caloriesBurned - caloriesEaten - calorieDeficit
+	}`;
 	document.querySelector("#calories-available").innerHTML = caloriesAvailable;
 });
