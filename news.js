@@ -1,9 +1,12 @@
+// variable to target specific html elements
 const searchForm = document.querySelector(".search");
 const input = document.querySelector(".newsInput");
 const newsList = document.querySelector(".news-list");
 
+// listens for sumbit of news form
 searchForm.addEventListener("submit", retrieve);
 
+// funtion to return news articls and add them to html
 function retrieve(e) {
 	if (input.value == "") {
 		alert("Please search for a topic");

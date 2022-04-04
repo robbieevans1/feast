@@ -14,6 +14,7 @@ const access_token =
 activityUrl = `https://api.fitbit.com/1/user/-/activities/date/${today}.json`;
 foodUrl = `https://api.fitbit.com/1/user/-/foods/log/caloriesIn/date/${today}/1d.json`;
 
+// function to convert api data to json
 function jsonFromResponse(response) {
 	console.log(response);
 	if (!response.ok) {
@@ -22,6 +23,7 @@ function jsonFromResponse(response) {
 	return response.json();
 }
 
+// variable that holds auth
 const getWithAuth = {
 	method: "GET",
 	headers: { Authorization: "Bearer " + access_token },
@@ -41,6 +43,7 @@ Promise.all([
 	let caloriesEaten = `<p>Calories Eaten: ${foodData["foods-log-caloriesIn"][0].value}</p>`;
 	document.querySelector("#calories-eaten").innerHTML = caloriesEaten;
 
+	// add calorie deficit desired to html
 	let calorieDeficit = "<p>Desired Deficit: 500</p>";
 	document.querySelector("#calorie-deficit").innerHTML = calorieDeficit;
 
@@ -60,6 +63,7 @@ Promise.all([
 	const restingHeartRate = `<p>Resting Heart Rate: ${data.summary.restingHeartRate}</p>`;
 	document.querySelector("#heart-rate").innerHTML = restingHeartRate;
 
+	// redeclaring calories deficit to be used an input to equation
 	calorieDeficit = 500;
 
 	// redeclaring variable from activity url
@@ -68,6 +72,7 @@ Promise.all([
 	// redeclaring variable from food url
 	caloriesEaten = foodData["foods-log-caloriesIn"][0].value;
 
+	// add calories available to html
 	const caloriesAvailable = `<p> Calories Available<span class="text-warning"> Right Now</span>: ${
 		caloriesBurned - caloriesEaten - calorieDeficit
 	}`;
