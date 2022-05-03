@@ -9,7 +9,7 @@ let today = year + "-" + month + "-" + day;
 
 // my fitbit token
 const access_token =
-	"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzg5Q0QiLCJzdWIiOiI0M1BHRFYiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd3dlaSB3c29jIHdzZXQgd2FjdCB3bG9jIiwiZXhwIjoxNjUxMzgyNTMyLCJpYXQiOjE2NTA3Nzg4OTV9.ihazjWW_zXJaQMOqjo7fbkeVEQP9IqwFTm5kq0EULSQ";
+	"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzg5Q0QiLCJzdWIiOiI0M1BHRFYiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd251dCB3cHJvIHdzbGUgd3dlaSB3c29jIHdzZXQgd2FjdCB3bG9jIiwiZXhwIjoxNjUyMTQ2MTc4LCJpYXQiOjE2NTE1NDEzNzh9.Hp0j00N2o-Et7NdRLtUdtyRc9e6A48HLc2wj_BUsUzY";
 
 activityUrl = `https://api.fitbit.com/1/user/-/activities/date/${today}.json`;
 foodUrl = `https://api.fitbit.com/1/user/-/foods/log/caloriesIn/date/${today}/1d.json`;
